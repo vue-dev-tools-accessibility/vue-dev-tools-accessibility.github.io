@@ -3,10 +3,8 @@ import path from 'node:path';
 import pluginJs from '@eslint/js';
 import tjwBase from 'eslint-config-tjw-base';
 import tjwImport from 'eslint-config-tjw-import';
-import tjwJest from 'eslint-config-tjw-jest';
 import tjwVue from 'eslint-config-tjw-vue';
 import pluginImport from 'eslint-plugin-import';
-import pluginJest from 'eslint-plugin-jest';
 import pluginVue from 'eslint-plugin-vue';
 import pluginVueA11y from 'eslint-plugin-vuejs-accessibility';
 import globals from 'globals';
@@ -22,19 +20,13 @@ export default [
   pluginImport.flatConfigs.recommended,
   tjwImport,
 
-  pluginJest.configs['flat/recommended'],
-  tjwJest.configs.recommended,
-
   ...vue3Recommended,
   ...vueA11yRecommended,
   tjwVue,
 
   {
     languageOptions: {
-      globals: {
-        ...globals.browser,
-        vi: true
-      }
+      globals: globals.browser
     },
     rules: {
       'import/no-anonymous-default-export': 'off',
@@ -42,9 +34,6 @@ export default [
       'import/no-namespace': 'off',
       'import/no-unresolved': 'off',
       'import/no-unused-modules': 'off',
-
-      // If this is not turned off, linting throws because it can't find 'jest' install
-      'jest/no-deprecated-functions': 'off',
 
       'vue/no-multiple-template-root': [
         'off'
@@ -66,8 +55,7 @@ export default [
           viteConfig: {
             resolve: {
               alias: {
-                '@': path.resolve(__dirname, 'src'),
-                '@@': path.resolve(__dirname, 'tests')
+                '@': path.resolve(__dirname, 'src')
               }
             }
           }

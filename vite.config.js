@@ -5,8 +5,6 @@ import vue from '@vitejs/plugin-vue';
 /* eslint-disable-next-line */
 import { defineConfig } from 'vite';
 import vueDevTools from 'vite-plugin-vue-devtools';
-/* eslint-disable-next-line import/named */
-import { configDefaults } from 'vitest/dist/config.js';
 
 export default defineConfig({
   build: {
@@ -29,28 +27,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@@': fileURLToPath(new URL('./tests', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  },
-  test: {
-    coverage: {
-      exclude: [
-        ...(configDefaults?.coverage?.exclude || []),
-        '.eslintrc.cjs',
-        './src/main.js',
-        '**/scripts/'
-      ],
-      reportsDirectory: './tests/unit/coverage'
-    },
-    environment: 'happy-dom',
-    globals: true,
-    root: '.',
-    setupFiles: [
-      './tests/unit/setup.js'
-    ],
-    snapshotSerializers: [
-      './node_modules/vue3-snapshot-serializer/index.js'
-    ]
   }
 });
