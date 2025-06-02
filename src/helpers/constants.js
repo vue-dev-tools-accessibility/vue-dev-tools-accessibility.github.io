@@ -24,23 +24,13 @@ export const VITE_CONFIG_EXAMPLE = unindent(`
   import vue from '@vitejs/plugin-vue';
   import { defineConfig } from 'vite';
   import vueDevTools from 'vite-plugin-vue-devtools';
+  import vueDevToolsAccessibility from 'vue-dev-tools-accessibility';
 
   export default defineConfig({
     plugins: [
       vue(),
-      vueDevTools()
+      vueDevTools(),
+      vueDevToolsAccessibility()
     ]
   });
-`);
-
-export const MAIN_JS_EXAMPLE = unindent(`
-  // main.js
-  import { createApp } from 'vue';
-  import vueDevToolsAccesibility from 'vue-dev-tools-accessibility';
-
-  import App from '@/App.vue';
-
-  const app = createApp(App);
-  app.use(vueDevToolsAccesibility);
-  app.mount('#app');
 `);

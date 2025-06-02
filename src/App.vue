@@ -32,13 +32,6 @@
             :copy="false"
           />
         </li>
-        <li>
-          Register the plugin.
-          <DoxenCodeBox
-            :code="MAIN_JS_EXAMPLE"
-            :copy="false"
-          />
-        </li>
       </ol>
     </main>
     <footer>
@@ -66,7 +59,6 @@ import { DoxenCodeBox } from 'vue-doxen';
 
 import {
   APP_NAME,
-  MAIN_JS_EXAMPLE,
   VITE_CONFIG_EXAMPLE
 } from '@/helpers/constants.js';
 
@@ -77,7 +69,6 @@ export default {
   },
   constants: {
     APP_NAME,
-    MAIN_JS_EXAMPLE,
     VITE_CONFIG_EXAMPLE
   }
 };
