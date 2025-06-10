@@ -32,6 +32,9 @@
             :copy="false"
           />
         </li>
+        <li>
+          Run your app locally, it should have the Vue-DevTools floating at the bottom of the screen. Click on that and there should be an Accessibilty tab in the sidebar of the dev tools.
+        </li>
       </ol>
     </main>
     <footer>
