@@ -13,6 +13,7 @@ export default defineConfig({
         manualChunks: {
           'normalize.css': ['normalize.css'],
           vue: ['vue'],
+          'vue-doxen': ['vue-doxen'],
           'vue-options-api-constants-plugin': ['vue-options-api-constants-plugin']
         }
       }
