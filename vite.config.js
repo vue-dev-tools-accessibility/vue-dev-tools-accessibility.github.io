@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue';
 /* eslint-disable-next-line */
 import { defineConfig } from 'vite';
 import vueDevTools from 'vite-plugin-vue-devtools';
+import vueDevToolsAccessibility from 'vue-dev-tools-accessibility';
 
 export default defineConfig({
   build: {
@@ -24,7 +25,8 @@ export default defineConfig({
     vue(),
     vueDevTools({
       launchEditor: 'subl'
-    })
+    }),
+    vueDevToolsAccessibility()
   ],
   resolve: {
     alias: {
