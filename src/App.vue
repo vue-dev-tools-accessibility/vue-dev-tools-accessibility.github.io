@@ -10,7 +10,7 @@
     </header>
     <main>
       <h3>
-        A Vue-DevTools plugin that scans for accessibility issues on the page.
+        A Vue-DevTools plugin that scans for accessibility issues on the page using Axe.
       </h3>
 
       <h2>
@@ -216,6 +216,11 @@ export default {
     margin-bottom: 8px;
     padding: 8px 8px;
     color: currentColor;
+    cursor: pointer;
+  }
+  .screenshot-button:hover,
+  .screenshot-button:focus {
+    border: 1px solid #9CA3AF96;
   }
   .screenshot-button svg {
     width: 19.2px;
