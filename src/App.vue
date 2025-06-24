@@ -75,6 +75,7 @@
       </div>
 
       <a
+        class="screenshot-link"
         :href="'/vdta-' + themeName + '.png'"
         target="_blank"
       >
@@ -225,6 +226,9 @@ export default {
   .screenshot-button svg {
     width: 19.2px;
     height: 19.2px;
+  }
+  .screenshot-link {
+    display: inline-block;
   }
   .screenshot {
     max-width: 100%;
