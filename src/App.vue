@@ -10,19 +10,19 @@
     </header>
     <main>
       <section>
-        <h3>
+        <h2>
           A Vue-DevTools plugin that scans for accessibility issues on the page using Axe.
-        </h3>
+        </h2>
       </section>
 
       <section>
-        <h2>
+        <h3>
           Getting Started
-        </h2>
+        </h3>
 
         <ol>
           <li>
-            Install the dependencies in your project:
+            In your Vue + Vite app, install the dev-tool dependencies:
             <DoxenCodeBox
               code="npm install --save-dev vue-dev-tools-accessibility@latest vite-plugin-vue-devtools@latest"
               :copy="false"
@@ -47,9 +47,9 @@
         <div
           class="screenshot-section"
         >
-          <h2>
+          <h3>
             Screenshots
-          </h2>
+          </h3>
 
           <button
             class="screenshot-button"
@@ -97,7 +97,7 @@
       <hr />
 
       <section>
-        <h2>Features</h2>
+        <h3>Features</h3>
 
         <ul>
           <li>Integrates directly with <code>vite-plugin-vue-devtools</code>.</li>
@@ -206,12 +206,26 @@ export default {
   .logo {
     height: 48px;
   }
+  h2 {
+    font-size: 19px;
+  }
+  h3 {
+    font-size: 24px;
+  }
   ol li {
     margin-bottom: 1rem;
     line-height: 1.5;
   }
   ul li {
     margin-bottom: 1rem;
+  }
+  ul > li {
+    padding-left: 0.5rem;
+    list-style-type: disclosure-closed;
+  }
+  ul > li > ul > li {
+    padding-left: 0.25rem;
+    list-style-type: circle;
   }
   ul ul {
     margin-top: 1rem;
