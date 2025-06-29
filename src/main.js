@@ -5,6 +5,7 @@ import App from '@/App.vue';
 
 import 'normalize.css/normalize.css';
 import 'highlightjs/styles/ir-black.css';
+import '@/styles/styles.css';
 
 const app = createApp(App);
 app.use(constantsPlugin);
