@@ -123,6 +123,7 @@
     <iframe
       src="https://thejaredwilcurt.com/vue-projects/#/?style=background:#15171A;color:#E8EDF2;"
       style="width: 100%; height: 370px; border: 0px;"
+      title="List of other Vue libraries to check out"
     ></iframe>
 
     <footer>
