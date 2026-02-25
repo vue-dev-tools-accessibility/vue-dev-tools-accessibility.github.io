@@ -1,3 +1,8 @@
+body {
+  background: #0B1110;
+  background: linear-gradient(#0B1110, HSL(210, 27%, 8%), #0B1110);
+}
+
 .hljs {
   background: #000C;
 }
